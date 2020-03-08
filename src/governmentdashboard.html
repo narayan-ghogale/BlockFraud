@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/file.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="container">
+  <div id="sideMenu">
+    <div id="sideMenuFixed"></div>
+    <div id="sidecontent">
+    <h1>BlockFraud</h1>
+
+    <ul class="menu">
+      <li>All Contracts</li>
+    </ul>
+
+    <ul class="menu">
+      <li>Contracts</li>
+      <li onclick="App.getrequested(); return false;">Requested<span class="colorIcon orange"></span></li>
+      <li onclick="App.getapproved(); return false;">Approved <span class="colorIcon yellow"></span></li>
+      <li onclick="App.getrejected(); return false;" >Rejected <span class="colorIcon red"></span></li>
+      <li onclick="App.getdisbursed(); return false;">Disbursed<span class="colorIcon green"></span></li>
+      <li onclick="App.getverified(); return false;">Verified<span class="colorIcon green"></span></li>
+    </ul>
+
+    
+    <!--<div class="addCategory"><span class="plus">+</span> Add Category</div>-->
+    </div>
+  </div>
+  <div id="content">
+    <div id="titleBar">
+      <h2></h2>
+     
+    </div>
+
+    <div class="mainChart">  
+      <table id ="allcontracts">
+        <tr>
+         <th>Project Name</th>
+         <th>Amount</th>
+         <th>company UID</th>
+         <th>Approval</th>
+         </tr>
+      </table>
+     <!--  <script>
+        let all=[{pname:"Project1",amount:200000,location:"worli",file:"link"},
+        {pname:"Project1",amount:200000,location:"worli",file:"link"},
+        {pname:"Project1",amount:200000,location:"worli",file:"prob.pdf"}]
+        let a=document.getElementById('allcontracts');
+        let tr='<table>'
+        +'<tr>'
+        +'<th>Project Name</th>'
+        +'<th>Amount</th>'
+        +'<th>Location</th>'
+        +'<th>Form</th>'
+        +'<th>Approval</th>'
+        +'</tr>';
+    tr+='<table>'
+    for(var i=0;i<all.length;i++){
+    tr = tr+'<tr>'
+    +"<td>" +all[i].pname+"</td>"
+    +"<td>" +all[i].amount+"</td>"
+    +"<td>" +all[i].location+"</td>"
+    +"<td>" +'<a href=${all[i].link}>Thisfile</a>'+"</td>"
+    +'<td><button class="acceptreject green">'+"Approve"+'</button>'+'<button class="acceptreject red">'+"Reject"+'</button>'+'</td>'
+    +"</tr>";
+      }
+      a.innerHTML=tr;
+      </script> -->
+    </div>
+
+  </div>
+</div>
+</div>
+<!-- partial -->
+<!--   <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js'></script>
+ --><!-- <script src='https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/0.7.4/dist/progressbar.js'></script><script  src="js/script.js"></script>
+
+ -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>-->
+<script src="./js/bootstrap.min.js"></script>
+
+ <script src="js/truffle-contract.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

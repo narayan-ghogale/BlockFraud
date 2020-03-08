@@ -1,0 +1,212 @@
+
+
+.container h1 {
+  color: #fff;
+  margin: 15px;
+  padding: 15px;
+}
+.container .main {
+  height: 50%;
+}
+.container .main .progress {
+  margin: 20px;
+  height: 10px;
+  background-color: #eeeeee;
+}
+a:link, a:visited {
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+}
+.container .main .progress .progress-bar {
+  height: 15px;
+  color: #eeeeee;
+}
+.container .main .progreso1 {
+  transition-delay: 4s;
+  transition: all 0.45s ease-in-out;
+  width: 34.333333%;
+  animation: 0.5s;
+  background-color: #66ccff;
+}
+@media (max-width: 768px) {
+  .container .main .progreso1 {
+    width: 34%;
+  }
+}
+.container .main .progreso2 {
+  width: 69.3333%;
+  animation: 0.5s;
+  background-color: #66ccff;
+  transition: all 0.45s ease;
+}
+@media (max-width: 768px) {
+  .container .main .progreso2 {
+    width: 73%;
+  }
+}
+.container .main .progreso3 {
+  width: 100%;
+  animation: 0.5s;
+  background-color: #66ccff;
+  transition: all 0.45s ease;
+}
+.container .main .block1 {
+  position: absolute;
+  margin: 0 0%;
+  border-radius: 50%;
+  background-color: #66ccff;
+  height: 50px;
+  width: 50px;
+  top: 0px;
+  padding: 4px;
+  margin-top: 90px;
+}
+.container .main .block2 {
+  position: absolute;
+  margin: 0 33.33333333%;
+  border-radius: 50%;
+  background-color: #eeeeee;
+  height: 50px;
+  width: 50px;
+  top: 0px;
+  padding: 4px;
+  margin-top: 90px;
+}
+@media (max-width: 768px) {
+  .container .main .block2 {
+    margin: 0 31.5%;
+    margin-top: 90px;
+  }
+}
+.container .main .block3 {
+  position: absolute;
+  margin: 0 66.3333333%;
+  border-radius: 50%;
+  background-color: #eeeeee;
+  height: 50px;
+  width: 50px;
+  top: 0px;
+  padding: 4px;
+  margin-top: 90px;
+}
+@media (max-width: 768px) {
+  .container .main .block3 {
+    margin: 0 62.5%;
+    margin-top: 90px;
+  }
+}
+.container .main .block4 {
+  position: absolute;
+  margin: 0 92.5%;
+  border-radius: 50%;
+  background-color: #eeeeee;
+  height: 50px;
+  width: 50px;
+  top: 0px;
+  padding: 4px;
+  margin-top: 90px;
+}
+@media (max-width: 570px) {
+  .container .main .block4 {
+    margin: 0 86.5% !important;
+    margin-top: 90px !important;
+  }
+}
+@media (max-width: 768px) {
+  .container .main .block4 {
+    margin: 0 90.5%;
+    margin-top: 90px;
+  }
+}
+.container .main .circulo {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: #eeeeee;
+  top: 0px;
+  margin: 6px;
+}
+.container .main .fa-check {
+  font-size: 14px;
+  color: #fff;
+  padding: 2.5px;
+}
+.container .main .activeblock2 {
+  position: absolute;
+  margin: 0 33.33333%;
+  border-radius: 50%;
+  background-color: #66ccff !important;
+  height: 50px;
+  width: 50px;
+  top: 0px;
+  padding: 4px;
+  margin-top: 90px;
+}
+.container .main .activeblock3 {
+  position: absolute;
+  margin: 0 65%;
+  border-radius: 50%;
+  background-color: #66ccff;
+  height: 50px;
+  width: 50px;
+  top: 0px;
+  padding: 4px;
+  margin-top: 90px;
+}
+.container .main .activeblock4 {
+  position: absolute;
+  margin: 0 93%;
+  border-radius: 50%;
+  background-color: #66ccff;
+  height: 50px;
+  width: 50px;
+  top: 0px;
+  padding: 4px;
+  margin-top: 90px;
+}
+@media (max-width: 768px) {
+  .container .main .activeblock4 {
+    margin: 0 90.7%;
+    margin-top: 90px;
+  }
+}
+@media (min-width: 510px) and (max-width: 600px) {
+  .container .main .activeblock4 {
+    margin: 0 89.5%;
+    margin-top: 90px;
+  }
+}
+@media (min-width: 368px) and (max-width: 509px) {
+  .container .main .activeblock4 {
+    margin: 0 86%;
+    margin-top: 90px;
+  }
+}
+@media (min-width: 200px) and (max-width: 367px) {
+  .container .main .activeblock4 {
+    margin: 0 86%;
+    margin-top: 90px;
+  }
+}
+.container .main .activecirculo {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: #66ccff;
+  border: solid 4px #fff;
+  margin: 6px;
+}
+
+/**
+This is just to test, but you don't need it.
+*/
+.next {
+  margin-top: 50px;
+}
+.next .next2 {
+  display: none;
+}
+.next .next3 {
+  display: none;
+}

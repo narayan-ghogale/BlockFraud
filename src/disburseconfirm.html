@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/file.css">
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="container">
+  <div id="sideMenu">
+    <div id="sideMenuFixed"></div>
+    <div id="sidecontent">
+    <h1>BLOCKFRAUD</h1>
+
+    <ul class="menu">
+      <li>Schemes</li>
+      <li>All Schemes</li>
+      <li>My schemes<span class="notification">8</span></li>
+    </ul>
+
+    <ul class="menu">
+      <li>My schemes</li>
+      <li>Under Scrutiny<span class="colorIcon orange"></span></li>
+      <li>Approved <span class="colorIcon yellow"></span></li>
+      <li>Disbursed<span class="colorIcon green"></span></li>
+      <li>Rejected <span class="colorIcon red"></span></li>
+    </ul>
+
+    <ul class="menu">
+      <li>Add a Scheme</li>
+    </ul>
+    <!--<div class="addCategory"><span class="plus">+</span> Add Category</div>-->
+    </div>
+  </div>
+  <div id="content">
+    <form onSubmit="App.disburse_bill(); return false;">
+        <div class="myform" class="container">
+            <h1></h1>
+            <div class="row"><label>Project Name</label><input id="cid" type="text" ></div>
+            <div class="row"><label>UTR Number</label><input id="utr" type="text" ></div>
+            <div class="row"><label>Supplier Aadhar No.</label><input id="suid" ></div>
+            <input type="submit" class="btn blue" value="Submit">
+        </div>
+        </form>
+ </div>
+</div>
+<!-- partial -->
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js'></script>
+<script src='https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/0.7.4/dist/progressbar.js'></script><script  src="./script.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>-->
+<script src="./js/bootstrap.min.js"></script>
+
+ <script src="js/truffle-contract.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

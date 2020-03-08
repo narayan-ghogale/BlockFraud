@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/file.css">
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="container">
+  <div id="sideMenu">
+    <div id="sideMenuFixed"></div>
+    <div id="sidecontent">
+    <h1>BlockFraud</h1>
+
+    <ul class="menu">
+      <li>Schemes</li>
+      <li onclick="App.getmy();return false">All Contracts</li>
+    </ul>
+
+    <ul class="menu">
+      <li><a href="addtender.html">Add a Tender</a></li>
+    </ul>
+    
+    <ul class="menu">
+    </ul>
+    <!--<div class="addCategory"><span class="plus">+</span> Add Category</div>-->
+    </div>
+  </div>
+  <div id="content">
+    <form onSubmit="App.tender_insert(); return false;">
+        <div class="myform" class="container">
+            <!--<div id="bal">Balance: </div>-->
+            <!-- <div><label><h4>Download Tender Form</h4></label>&nbsp;<a href="prob.pdf" download>Tender Form</a>
+            </div> -->
+<!--             <div class="row"><label>Company Name</label><input id="cname" type="text" ></div>
+ -->           <!--  <div class="row"><label>Location</label><input id="location"  type="text" ></div>
+            <div class="row"><label>Contractor Aadhar ID</label><input id="uid" type="text" ></div> -->
+            <div class="row"><label>Project Name</label><input type="text" id="pname"  ></div>
+            <div class="row"><label>Supplier Name</label><input type="text" id="sname" ></div>
+            <div class="row"><label>Amount</label><input type="text" id="amount"></div>
+<!--             <div class="row"><label>Add your document</label><input style="color:white;" id="tender" type="file"></div>
+ -->            <input type="submit" class="btn blue" value="Submit">
+        </div>
+        </form>
+ </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js'></script>
+<script src='https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/0.7.4/dist/progressbar.js'></script><script  src="js/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>-->
+<script src="./js/bootstrap.min.js"></script>
+<!--<script src="./js/web3.min.js"></script>-->
+<script src="./js/truffle-contract.js"></script>
+<script src="./js/app.js"></script>
+
+</body>
+</html>

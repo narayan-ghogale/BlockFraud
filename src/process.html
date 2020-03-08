@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/file.css">
+  <!-- <link href="./css/bootstrap.min.css" rel="stylesheet"> -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+  <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="container">
+  <div id="sideMenu">
+    <div id="sideMenuFixed"></div>
+    <div id="sidecontent">
+    <h1>BlockFraud</h1>
+
+    <ul class="menu">
+      <li>Schemes</li>
+      <li onclick="App.getmy();return false">All Contracts</li>
+    </ul>
+
+    <ul class="menu">
+      <li><a href="addtender.html">Add a Tender</a></li>
+    </ul>
+
+    <!--<div class="addCategory"><span class="plus">+</span> Add Category</div>-->
+    </div>
+  </div>
+  <div id="content">
+    <div id="titleBar">
+      <h2 style="color:white;">Hello contractor</h2>  <br><br>
+      <h2 style="color:white;">All contracts</h2>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+          <div class="main col-12" style="color:white;">
+             <h1 class="text-center">Process</h1>
+             <div class="progress">
+               <div id="p" class="progress-bar  bg-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" ariavaluemax="100"></div>
+             </div>
+             <div class="block1">
+               <div id="b1" class="text-center activecirculo">
+                 <i class="icon1"></i>
+               </div>
+               Start
+             </div>
+             <div id="block2A" class="block2">
+               <div id="b2" class="text-center circulo">
+                 <i class="icon2"></i>
+               </div>
+               Tender Submitted
+             </div>
+             <div id="block3A" class="block3">
+               <div id="b3" class="text-center circulo">
+                 <i class="icon3"></i>    
+               </div>
+               Approved/Rejected
+             </div>
+             <div id="block4A" class="block4">
+               <div id="b4"class="text-center circulo">
+                 <i id="icon4"></i>
+               </div>
+               Disbursed
+             </div>
+            <!--Just to test!!!-->
+            <!-- <div class="text-center next">
+              <button onclick="enviar()" id="next1" class="next1 btn btn-primary">Next</button>
+              <button onclick="enviar2()" id="next2" class="next2 btn btn-primary">Next</button>
+              <button onclick="enviar3()" id="next3" class="next3 btn btn-primary">Next</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- partial -->
+    <!--     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script><script  src="css/script2.js"></script> -->
+      <br><br><br><br>
+    <div class="mainChart">
+
+        <div id ="allcontracts"></div>
+        <table id ="mycontracts">
+        <tr>
+         <th>Project Name</th>
+         <th>Amount</th>
+         <th>company UID</th>
+         <th>View</th>
+         </tr>
+      </table>
+    </div>
+    </div>
+
+  </div>
+</div>
+</div>
+<!-- partial -->
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js'></script> -->
+<script src='https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/0.7.4/dist/progressbar.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>-->
+<script src="./js/bootstrap.min.js"></script>
+<!--<script src="./js/web3.min.js"></script>-->
+<script src="./js/truffle-contract.js"></script>
+<script src="./js/app.js"></script>
+<script  src="js/script.js"></script>
+<script  src="js/script2.js"></script>
+<!-- <script>
+    setTimeout(function(){enviar()},3000);
+    setTimeout(function(){enviar2()},6000);
+    setTimeout(function(){enviar3()},9000);
+
+
+    // setInterval(document.getElementById('next2').click(),5000)
+
+    // setInterval(document.getElementById('next3').click(),5000)
+    // setInterval(document.getElementById('next1').click(),5000)
+
+</script> -->
+</body>
+</html>
