@@ -1,5 +1,7 @@
 # BlockFraud
 Blockchain DApp made in CodeShashtra 6.0  
+(Featured in TOP 14 among 100 teams participated in CodeShashtra 6.0)     
+Devfolio link: https://devfolio.co/submissions/blockfraud    
 Blockchain Solution for Transparent and Speedy Disbursement of Government funds for various schemes.  
 Different Beneficiaries such as contractors can make use of this Dapp for tender application, 
 faster approval, and fund disbursal process. At the same time, the government is facilitated
