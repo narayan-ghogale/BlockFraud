@@ -21,4 +21,3 @@ All rejected tenders are also kept to keep track of previous rejected tendors.
 ![](screenshots/5.PNG)      
 
 After disbursal of money, it is mandatory for constructor to submit verification form which includes UTR number of payment to supplier and supplier information. This is where blockchain is useful. Government can later verify the immutable blockchain history of project for investigation  
-  (Further screenshots will be added soon)....
