@@ -10,7 +10,6 @@ App =
     //App.generate()
   },
 
-  // https://medium.com/metamask/https-medium-com-metamask-breaking-change-injecting-web3-7722797916a8
   loadWeb3: async () => {
     if (typeof web3 !== 'undefined') {
       App.web3Provider = web3.currentProvider
@@ -83,7 +82,6 @@ var id = document.getElementById("contId").value;
 var name = document.getElementById("contName").value;
 
 var v = await App.tendering.Contractor(id)
-//contractInstance.giveRightToVote(r, {from: web3.eth.accounts[0]});
 if(v[0]==id)
 {
   alert("Already registered");
@@ -92,11 +90,7 @@ else
 {
 await App.tendering.registerContractor(id,name);
 window.location.replace("http://localhost:3000/process.html");
-/*window.location.replace("http://localhost:3000/FarmerDashboard.html");
-var account = web3.currentProvider.selectedAddress;
-var f= await App.croping.farmerids(account);
-alert(f[0])
-document.getElementById("ID").appendChild(f[0]);*/
+
 }
 
  },
@@ -124,11 +118,7 @@ window.location.replace('http://localhost:3000/CustomerDashboard.html');
 
 
 tender_insert: async() =>{
-  //alert("hii");
-//var id = document.getElementById("customerId").value;
-//var name = document.getElementById("cname").value;
-//var loc = document.getElementById("location").value;
-//var a_id = document.getElementById("uid").value;
+  
 var pro_name = document.getElementById("pname").value;
 var sup_name= document.getElementById("sname").value;
 var budget =document.getElementById("amount").value;
@@ -137,11 +127,7 @@ await App.tendering.insertTender(pro_name,sup_name,budget);
  },
 
  disburse_bill: async() =>{
-  //alert("hii");
-//var id = document.getElementById("customerId").value;
-//var name = document.getElementById("cname").value;
-//var loc = document.getElementById("location").value;
-//var a_id = document.getElementById("uid").value;
+  
 var cid = document.getElementById("cid").value;
 var utr= document.getElementById("utr").value;
 var suid =document.getElementById("suid").value;
@@ -404,266 +390,8 @@ checkCustomer: async()=>{
     var edate=l[6];
     //alert(typeof edate);
   }
-},
-
-
-allLots: async() =>{
-
- //var account = web3.currentProvider.selectedAddress;
- //var fid= await App.croping.farmerids(account);
- //console.log(fid);
- //console.log(App.croping.lots(1));
- //console.log(App.croping.lotCount());
- var lc=0;
-
-
-////testing lots
-//////lots
-  var alllots=document.getElementById("customeriddashboard");
-
- App.croping.lotCount().then(res=>{
-  console.log(res.c[0]);
-  //document.getElementById("farmeriddashboard").innerHTML="working";
-  lc=res.c[0];
-  // var tr='';
-  var tr='';
-  // var alllots=document.getElementById("farmeriddashboard");
-  for(var i=1;i<=lc;i++){
-    App.croping.lots(i).then(res2=>{
-      console.log(res2);
-      App.croping.farmers(res2[0]).then(res3=>{
-      var cont=res3[3];
-            //styling and showing part
-      //alert(fid==res2[0].c[0]);
-      // if(res2[0].c[0]==fid){
-      //alert("inside");
-      // if(i%3===0)
-      // {tr=tr+'<div class="row">';
-      // lasti=i;
-      // }
-
-      var lid=res2[1].c[0];
-      var ffid=res2[0].c[0];
-      var price=res2[4].c[0];
-      console.log(lid);
-      if(!res2[7]){
-      tr = tr+'<div class="col-lg-3">';
-      tr += '<div class="lotbox"  >'
-      +"<label>" +"Farmer:" + res2[0]+"</label>"+"</br>"
-      + "<label>"+ "Lot ID:"+lid+"</label>"+"<br>"
-      +"<label>" + "Contact No.:"+cont+"</label>"+"<br>"
-      +"<label>" +"Crop: "+ res2[2]+"</label>"+"<br>"
-       +"<label>" +"Quantity: "+res2[3]+" kg"+"</label>"+"<br>"
-       +'<label id="price">' + "Price: "+res2[4] + "</label>"+"<br>"
-       +"<label>" + "Produce Date: " +res2[5] + "</label>"+"<br>"
-       // +"<label>" + "Expiry Date:"+res2[6] + "</label>"+"<br>"
-       +'<input type="submit" value="order" onclick="App.buy('+lid+','+ffid+','+price+');return false;" class="btn btn-primary">'+"</div>"+"</div>";
-      // if(i-2===lasti)
-      // {tr=tr+'</div>'}
-      // }
-      
-      console.log(tr);
-              alllots.innerHTML=tr;
-
-        }
-      //window.location.replace('http://localhost:3000/Viewlots.html');
-      });
-    })
-  }
-        alllots.innerHTML+=tr;
-})  
-},
-/*buy: async()=>{
-
-  // alert(document.getElementById('lotid'));
-  alert(document.getElementById('price').textContent);
-        //await App.croping.buyLot(fid,lid);
-},*/
-
-// buy: async()=>{
-//App.buy();await App.croping.buyLot(res2[0],res2[1]);
-// }
-showfarmer:async() =>{
-  var account = web3.currentProvider.selectedAddress;
- var cid= await App.croping.farmerids(account);
- var farmerid=document.getElementById('showfarmer');
- farmerid.innerHTML=cid;
-},
-
-myPurchases: async() =>{
-
- var account = web3.currentProvider.selectedAddress;
- var cid= await App.croping.customerids(account);
- //console.log(fid);
- //console.log(App.croping.lots(1));
- //console.log(App.croping.lotCount());
- //var lc=0;
-
-
-////testing lots
-//////lots
-  var alllots=document.getElementById("customeriddashboard");
- App.croping.lotCount().then(res=>{
-  console.log(res.c[0]);
-  //document.getElementById("farmeriddashboard").innerHTML="working";
-  lc=res.c[0];
-  // var tr='';
-  var tr='';
-  // var alllots=document.getElementById("farmeriddashboard");
-  for(var i=1;i<=lc;i++){
-    App.croping.lots(i).then(res2=>{
-      console.log(res2);
-      //styling and showing part
-      //alert(fid==res2[0].c[0]);
-      if(res2[8].c[0]==cid&&res2[7]){
-      //alert("inside");
-      // if(i%3===0)
-      // {tr=tr+'<div class="row">';
-      // lasti=i;
-      // }
-      tr = tr+'<div class="col-lg-3">';
-      tr += '<div class="lotbox">'
-      +"<label>" + "Farmer ID"+res2[0]+"</label>"+"<br>"
-      +"<label>" + "Lot ID"+res2[1]+"</label>"+"<br>"
-      +"<label>" +"Crop: "+ res2[2]+"</label>"+"<br>"
-       +"<label>" +"Quantity: "+res2[3] + "</label>"+"<br>"
-       +"<label>" + "Price: "+res2[4] + "</label>"+"<br>"
-       +"<label>" + "Produce Date: " +res2[5] + "</label>"+"<br>"
-       // +"<label>" + "Expiry Date:"+res2[6] + "</label>"+"<br>"
-       +"</div>"+"</div>";
-      // if(i-2===lasti)
-      // {tr=tr+'</div>'}
-      }
-      console.log(tr);
-              alllots.innerHTML=tr;
-
-      //window.location.replace('http://localhost:3000/Viewlots.html');
-    })
-  }
-        alllots.innerHTML+=tr;
-
-})
- alert(tr);
- console.log(tr);
-   alllots.innerHTML = tr;
-
-//  })
-//  alert(lc);
-//  for(var i=1;i<lc;i++)
-//  {
-//  var v=await App.croping.lots(i);
-//   if(v[0]==fid)
-//   {
-//    alert(v[1]);
-// alert(v[2]);
-// alert(v[3]);
-// alert(v[4]);
-// alert(v[5]);
-//    alert(v[6]);
-// alert(v[7]);
-//   }
- 
-//  }
-
-},
-
-
-myLots: async() =>{
-
- var account = web3.currentProvider.selectedAddress;
- var fid= await App.croping.farmerids(account);
- console.log(fid);
- console.log(App.croping.lots(1));
- console.log(App.croping.lotCount());
- var lc=0;
-
-
-////testing lots
-//////lots
-  var alllots=document.getElementById("farmeriddashboard");
-
-
-
- App.croping.lotCount().then(res=>{
-  console.log(res.c[0]);
-  //document.getElementById("farmeriddashboard").innerHTML="working";
-  lc=res.c[0];
-  // var tr='';
-  var tr='';
-  // var alllots=document.getElementById("farmeriddashboard");
-  for(var i=1;i<=lc;i++){
-    App.croping.lots(i).then(res2=>{
-      console.log(res2);
-      //styling and showing part
-      //alert(fid==res2[0].c[0]);
-      if(res2[0].c[0]==fid){
-      //alert("inside");
-      // if(i%3===0)
-      // {tr=tr+'<div class="row">';
-      // lasti=i;
-      // }
-      tr = tr+'<div class="col-lg-3">';
-      tr += '<div class="lotbox"  >'
-      +"<label>" + "Lot ID: "+res2[1]+"</label>"+"<br>"+"<hr>"
-      +"<label>" +"Crop: "+ res2[2]+"</label>"+"<br>"
-       +"<label>" +"Quantity: "+res2[3] + "</label>"+"<br>"
-       +"<label>" + "Price: "+res2[4] + "</label>"+"<br>"
-       +"<label>" + "Produce Date: " +res2[5] + "</label>"+"<br>"
-       // +"<label>" + "Expiry Date:"+res2[6] + "</label>"+"<br>"
-       +"<label>" + "Sold or Not: "+res2[7] + "</label>"+'<br>'
-       +"<label>"+"Buyer: "+res2[8]+"</label>"+"</div>"+"</div>";
-      // if(i-2===lasti)
-      // {tr=tr+'</div>'}
-      }
-      console.log(tr);
-              alllots.innerHTML=tr;
-
-      //window.location.replace('http://localhost:3000/Viewlots.html');
-    })
-  }
-        alllots.innerHTML+=tr;
-
-})
- alert(tr);
- console.log(tr);
-   alllots.innerHTML = tr;
-
-//  })
-//  alert(lc);
-//  for(var i=1;i<lc;i++)
-//  {
-//  var v=await App.croping.lots(i);
-//   if(v[0]==fid)
-//   {
-//    alert(v[1]);
-// alert(v[2]);
-// alert(v[3]);
-// alert(v[4]);
-// alert(v[5]);
-//    alert(v[6]);
-// alert(v[7]);
-//   }
- 
-//  }
-
-},
-
-checkLotExpiry: async()=>{
-  var l= await App.croping.lots(i);
-  var edate=l[6];
-
-},
-
-buy: async(lid,fid,price)=>{
-  //alert(lid);
-  //alert(fid);
-  // alert(document.getElementById('lotid').value);
-  var account = web3.currentProvider.selectedAddress;
-  // var l =await App.croping.lots(1);
-  // var lid= l[0];
-  // var fid=l[1];
-  await  App.croping.buyLot(fid,lid,{from:account,value:price});
 }
+
 
 
 
